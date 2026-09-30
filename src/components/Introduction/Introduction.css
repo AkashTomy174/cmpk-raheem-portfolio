@@ -1,0 +1,24 @@
+.introduction {
+  background: var(--bg);
+  border-block: 1px solid var(--border);
+}
+
+.introduction__pillars {
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction__pillar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.introduction__pillar-label {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}

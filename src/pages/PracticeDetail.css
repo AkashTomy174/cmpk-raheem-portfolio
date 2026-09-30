@@ -1,0 +1,107 @@
+.practice-detail__header {
+  padding-top: calc(var(--space-24) + var(--space-6));
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid var(--border);
+}
+
+.practice-detail__back {
+  margin-bottom: var(--space-8);
+  color: var(--ink-secondary);
+}
+
+.practice-detail__title-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.practice-detail__title-row h1 {
+  margin: 0;
+}
+
+.practice-detail__short {
+  max-width: 60ch;
+}
+
+.practice-detail__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: var(--space-16);
+}
+
+.practice-detail__heading {
+  font-size: 1.5rem;
+  margin: var(--space-10) 0 var(--space-4);
+}
+
+.practice-detail__grid > div > .practice-detail__heading:first-child {
+  margin-top: 0;
+}
+
+.practice-detail__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.practice-detail__list li {
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.practice-detail__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.practice-detail__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border-left: 1px solid var(--border);
+  padding-left: var(--space-8);
+  height: fit-content;
+}
+
+.practice-detail__sidebar .micro-label {
+  margin-bottom: var(--space-3);
+}
+
+.practice-detail__next {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.practice-detail__next-link {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .practice-detail__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-detail__sidebar {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-left: 0;
+    padding-top: var(--space-8);
+  }
+}

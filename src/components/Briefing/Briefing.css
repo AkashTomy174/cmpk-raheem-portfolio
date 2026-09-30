@@ -1,0 +1,115 @@
+.briefing {
+  background: var(--bg-secondary);
+  border-block: 1px solid var(--border);
+}
+
+.briefing__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(var(--space-8), 6vw, var(--space-16));
+}
+
+.briefing__heading {
+  margin: var(--space-5) 0 var(--space-5);
+  max-width: 16ch;
+}
+
+.briefing__topics {
+  list-style: none;
+  margin: var(--space-8) 0 0;
+  padding: var(--space-6) 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.briefing__topics li {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--ink-secondary);
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.briefing__topics li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.briefing__form-wrap {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: clamp(var(--space-6), 4vw, var(--space-8));
+}
+
+.briefing__form-label {
+  margin-bottom: var(--space-6);
+  color: var(--accent);
+}
+
+.briefing__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.briefing__field label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-secondary);
+}
+
+.briefing__field input,
+.briefing__field textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: var(--space-3) var(--space-4);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  resize: vertical;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.briefing__field input:focus-visible,
+.briefing__field textarea:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.briefing__field input[aria-invalid='true'],
+.briefing__field textarea[aria-invalid='true'] {
+  border-color: #b5583f;
+}
+
+.briefing__error {
+  font-size: 0.75rem;
+  color: #a3492f;
+}
+
+.briefing__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.briefing__success h3 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin: 0 0 var(--space-3);
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .briefing__grid {
+    grid-template-columns: 1fr;
+  }
+}

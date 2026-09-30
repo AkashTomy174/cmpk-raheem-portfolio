@@ -1,0 +1,26 @@
+.integrity {
+  background: var(--bg-secondary);
+  border-block: 1px solid var(--border);
+}
+
+.integrity__grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.integrity__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.integrity__item-title {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ink);
+}

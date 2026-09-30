@@ -1,0 +1,85 @@
+.principal {
+  background: var(--bg);
+}
+
+.principal__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.principal__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  max-width: 820px;
+  text-align: center;
+}
+
+.principal__quote-rule {
+  width: 48px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.principal__quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0;
+}
+
+.principal__feature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  width: 100%;
+  max-width: 900px;
+}
+
+.principal__portrait {
+  width: 100%;
+  max-width: 447px;
+}
+
+.principal__name {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: clamp(2.25rem, 4.5vw, 2.75rem);
+}
+
+.principal__subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.principal__affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.principal__affiliation {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: var(--space-2) var(--space-3);
+}
+
+.principal__bio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
