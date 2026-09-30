@@ -1,6 +1,7 @@
 export const institutions = [
   {
     id: 'vakkeel',
+    slug: 'vakkeel-associates',
     label: 'Legal Practice',
     name: 'Vakkeel & Associates',
     role: 'Founder & Managing Director',
@@ -10,6 +11,7 @@ export const institutions = [
   },
   {
     id: 'ils',
+    slug: 'indian-law-school',
     label: 'Legal Education & Research',
     name: 'Indian Law School',
     role: 'Founder',

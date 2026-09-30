@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import { institutions } from '../../data/institutions.js';
 import Reveal from '../Reveal.jsx';
 import './Institutions.css';
@@ -28,7 +30,13 @@ export default function Institutions() {
               <span className="hairline" />
               <div className="institutions__item-footer">
                 <p className="micro-label">{institution.tags}</p>
-                <span className="institutions__item-cta">{institution.cta}</span>
+                <Link
+                  to={`/institutions/${institution.slug}`}
+                  className="link-arrow institutions__item-cta"
+                >
+                  {institution.cta}
+                  <ArrowUpRight size={14} strokeWidth={1.5} aria-hidden="true" />
+                </Link>
               </div>
             </Reveal>
           ))}

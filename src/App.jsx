@@ -6,9 +6,9 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Practice from './pages/Practice.jsx';
 import PracticeDetail from './pages/PracticeDetail.jsx';
-import Insights from './pages/Insights.jsx';
 import Briefings from './pages/Briefings.jsx';
 import Institutions from './pages/Institutions.jsx';
+import InstitutionDetail from './pages/InstitutionDetail.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import NotFound from './pages/NotFound.jsx';
 
@@ -26,9 +26,9 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/practice/:slug" element={<PracticeDetail />} />
-          <Route path="/insights" element={<Insights />} />
           <Route path="/briefings" element={<Briefings />} />
           <Route path="/institutions" element={<Institutions />} />
+          <Route path="/institutions/:slug" element={<InstitutionDetail />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

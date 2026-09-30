@@ -9,7 +9,6 @@ import Methodology from '../components/Methodology/Methodology.jsx';
 import Integrity from '../components/Integrity/Integrity.jsx';
 import Principal from '../components/Principal/Principal.jsx';
 import Institutions from '../components/Institutions/Institutions.jsx';
-import Insights from '../components/Insights/Insights.jsx';
 import Briefing from '../components/Briefing/Briefing.jsx';
 import Contact from '../components/Contact/Contact.jsx';
 
@@ -30,7 +29,6 @@ export default function Home() {
       <Integrity />
       <Principal />
       <Institutions />
-      <Insights />
       <Briefing />
       <Contact />
     </>

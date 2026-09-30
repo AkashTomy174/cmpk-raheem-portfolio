@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navigation.css';
@@ -6,17 +6,37 @@ import './Navigation.css';
 const links = [
   { to: '/about', label: 'About' },
   { to: '/practice', label: 'Practice' },
-  { to: '/insights', label: 'Insights' },
   { to: '/institutions', label: 'Institutions' },
 ];
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const panelRef = useRef(null);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+    const handlePointerDown = (event) => {
+      if (panelRef.current && event.target === panelRef.current) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handlePointerDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handlePointerDown);
     };
   }, [menuOpen]);
 
@@ -59,7 +79,11 @@ export default function Navigation() {
         </button>
       </div>
 
-      <div id="mobile-nav" className={`nav__mobile ${menuOpen ? 'nav__mobile--open' : ''}`}>
+      <div
+        id="mobile-nav"
+        ref={panelRef}
+        className={`nav__mobile ${menuOpen ? 'nav__mobile--open' : ''}`}
+      >
         <nav className="nav__mobile-links" aria-label="Mobile">
           {links.map((link, index) => (
             <NavLink

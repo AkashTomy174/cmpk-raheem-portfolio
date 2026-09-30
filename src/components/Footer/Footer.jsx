@@ -4,7 +4,6 @@ import './Footer.css';
 const siteLinks = [
   { to: '/about', label: 'About' },
   { to: '/practice', label: 'Practice' },
-  { to: '/insights', label: 'Insights' },
   { to: '/institutions', label: 'Institutions' },
   { to: '/briefings', label: 'Private Briefing' },
   { to: '/contact', label: 'Contact' },

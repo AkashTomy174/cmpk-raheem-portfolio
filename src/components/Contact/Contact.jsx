@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 import Reveal from '../Reveal.jsx';
 import './Contact.css';
@@ -50,6 +51,14 @@ export default function Contact() {
           <Reveal delay={0.08} as="p" className="body-text">
             For confidential enquiries regarding strategic advisory, institutional matters, or
             private briefings.
+          </Reveal>
+          <Reveal delay={0.11} as="p" className="body-text">
+            Use this form for a specific, one-off matter. For recurring research on a topic
+            area, request{' '}
+            <Link to="/briefings" className="link-arrow">
+              Private Briefing access
+            </Link>{' '}
+            instead.
           </Reveal>
           <Reveal delay={0.14} className="contact__email">
             <Mail size={16} strokeWidth={1.5} aria-hidden="true" />

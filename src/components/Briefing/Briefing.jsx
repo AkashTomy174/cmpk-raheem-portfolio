@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Reveal from '../Reveal.jsx';
 import './Briefing.css';
 
@@ -57,6 +58,14 @@ export default function Briefing() {
           <Reveal delay={0.14} as="p" className="body-text">
             A periodic strategic briefing examining emerging regulatory, institutional,
             infrastructure, and governance developments relevant to senior decision-makers.
+          </Reveal>
+          <Reveal delay={0.17} as="p" className="body-text">
+            Request access here for recurring briefings on a topic area. For a specific,
+            one-off matter, use the{' '}
+            <Link to="/contact" className="link-arrow briefing__contact-link">
+              Contact form
+            </Link>{' '}
+            instead.
           </Reveal>
           <Reveal delay={0.2} as="ul" className="briefing__topics">
             {topics.map((topic) => (
